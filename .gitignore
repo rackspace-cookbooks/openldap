@@ -15,4 +15,3 @@ bin/*
 
 .cache
 .kitchen/
-.kitchen.local.yml
