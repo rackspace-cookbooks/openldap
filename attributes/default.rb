@@ -42,6 +42,8 @@ else
   default['openldap']['module_dir'] = "/usr/lib/ldap"
 end
 
+default['openldap']['preseed_dir'] = "/var/cache/local/preseeding"
+
 default['openldap']['ssl_dir'] = "#{openldap['dir']}/ssl"
 default['openldap']['cafile']  = "#{openldap['ssl_dir']}/ca.crt"
 default['openldap']['slapd_type'] = nil
@@ -57,5 +59,5 @@ if node['openldap']['basedn'] && node['openldap']['server']
   default['openldap']['auth_type']   = "openldap"
   default['openldap']['auth_binddn'] = "ou=people,#{openldap['basedn']}"
   default['openldap']['auth_bindpw'] = nil
-  default['openldap']['auth_url']    = "ldap://#{openldap['server']}/#{openldap['auth_binddn']}?uid?sub?(objecctClass=*)"
+  default['openldap']['auth_url']    = "ldap://#{openldap['server']}/#{openldap['auth_binddn']}?uid?sub?(objectClass=*)"
 end
