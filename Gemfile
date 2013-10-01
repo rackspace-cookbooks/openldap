@@ -1,4 +1,4 @@
 source :rubygems
 
-gem 'test-kitchen', '~> 1.0.0.alpha'
+gem 'test-kitchen'
 gem 'berkshelf'
