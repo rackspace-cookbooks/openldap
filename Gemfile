@@ -1,4 +1,5 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'test-kitchen'
-gem 'berkshelf'
+gem 'test-kitchen', '< 1.0'
+gem 'kitchen-vagrant', '~>0.11'
+gem 'berkshelf', '~>2.0'
